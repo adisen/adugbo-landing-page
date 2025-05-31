@@ -30,7 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onJoinWaitlist }) => {
       <div className="absolute top-10 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 z-20 py-10">
         <Image src={logo} alt="Logo" className="animate-pulse" />
       </div>
-      <div className="absolute bottom-4 left-4 md:left-8 lg:left-20 md:top-1/2 md:bottom-auto md:transform md:-translate-y-1/2 z-10">
+      <div className="absolute bottom-[-70px] left-[-40px] md:left-8 lg:left-20 md:top-1/2 md:bottom-auto md:transform md:-translate-y-1/2 z-10">
         <Image
           src={hearts}
           alt="Hand-drawn hearts"
@@ -38,7 +38,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onJoinWaitlist }) => {
           className="md:w-[400px] animate-pulse"
         />
       </div>
-      <div className="absolute top-4 right-25 md:right-8 lg:right-20 md:top-1/3 md:transform md:-translate-y-1/2 z-10">
+      <div className="absolute top-[-50px] right-[-150] md:right-8 lg:right-20 md:top-1/3 md:transform md:-translate-y-1/2 z-10">
         <Image
           src={chain}
           alt="Chain illustration"

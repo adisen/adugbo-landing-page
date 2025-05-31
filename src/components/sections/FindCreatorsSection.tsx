@@ -1,6 +1,6 @@
 const FindCreatorsSection: React.FC = () => {
   return (
-    <section className="py-32 px-6 bg-black h-[800px] flex items-center justify-center">
+    <section className="py-32 px-6 bg-black flex items-center justify-center">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 font-calistoga leading-tight">
           <span className="text-red-400">

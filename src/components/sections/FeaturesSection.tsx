@@ -26,7 +26,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
   animationElement,
 }) => {
   return (
-    <div className="relative py-16 px-6 overflow-hidden lg:h-[500px] flex items-center justify-between">
+    <div className="relative py-10 px-6 overflow-hidden lg:h-[500px] flex items-center justify-between">
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Text Content */}
@@ -45,11 +45,11 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 
           {/* Image Content */}
           <div
-            className={`md:w-1/2 flex justify-center order-1 ${
+            className={`md:w-1/2 flex justify-center order-1 h-[100%] ${
               imagePosition === 'left' ? 'md:order-1' : 'md:order-2'
             }`}
           >
-            <div className="relative w-3/4 flex justify-center">
+            <div className="relative lg:w-3/4 h-[100%] flex justify-center">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
@@ -66,20 +66,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="relative bg-[#1E1E1E]">
-      {/* Gradient overlay for first section only */}
-      <div
-        className="absolute top-0 left-0 right-0 h-1/3 opacity-20 pointer-events-none"
-        style={{
-          background: `
-            radial-gradient(ellipse 400px 300px at 70% 50%, #CA5DFE20 0%, transparent 60%),
-            radial-gradient(ellipse 350px 250px at 75% 45%, #FEE85F15 0%, transparent 55%),
-            radial-gradient(ellipse 300px 200px at 80% 55%, #FF5C7B15 0%, transparent 50%),
-            radial-gradient(ellipse 250px 180px at 85% 40%, #A7FF6015 0%, transparent 45%)
-          `,
-        }}
-      />
-
+    <section className="relative bg-[#1E1E1E] py-10">
       {/* Find Your Perfect Collab Partner */}
       <FeatureItem
         title="Find Your Perfect Collab Partner"

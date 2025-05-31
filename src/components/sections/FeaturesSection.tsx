@@ -11,7 +11,7 @@ import celebrationFigures from '@/assets/images/celebration-figures.svg';
 interface FeatureItemProps {
   title: string;
   description: string;
-  imageSrc: any;
+  imageSrc: string;
   imageAlt: string;
   imagePosition: 'left' | 'right';
   animationElement?: React.ReactNode;

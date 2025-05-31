@@ -24,7 +24,9 @@ const WaitlistFormSection: React.FC<WaitlistFormSectionProps> = ({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -58,12 +60,13 @@ const WaitlistFormSection: React.FC<WaitlistFormSectionProps> = ({
             </p>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-calistoga mb-8 leading-tight text-black">
-              We're building this with early creators in mind.
+              {"We're building this with early creators in mind."}
             </h2>
 
             <p className="text-lg leading-relaxed text-gray-800">
-              Want to help shape the app? Join the waitlist and let's build it
-              together.
+              {
+                "Want to help shape the app? Join the waitlist and let's build it together."
+              }
             </p>
           </div>
 
@@ -91,7 +94,9 @@ const WaitlistFormSection: React.FC<WaitlistFormSectionProps> = ({
               <select
                 name="platform"
                 value={formData.platform}
-                onChange={(e) => handleInputChange(e as any)}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                  handleInputChange(e)
+                }
                 className="w-full p-4 rounded-lg border-2 border-gray-800 bg-transparent text-gray-900 focus:outline-none focus:border-black transition-colors"
                 required
               >
